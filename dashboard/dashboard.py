@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-data = pd.read_csv("data/PRSA_Data_Changping_20130301-20170228.csv")
+data = pd.read_csv("dashboard/main_data.csv")
 data_clean = data.dropna().copy()
 
 data_clean["date"] = data_clean["year"].astype(str) + "-" + data_clean["month"].astype(str) + "-" + data_clean["day"].astype(str)
